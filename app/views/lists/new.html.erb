@@ -1,0 +1,7 @@
+<div class="container py-4">
+  <h1>Add a new list</h1>
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name %>
+    <%= f.button :submit, class: "btn btn-flat" %>
+  <% end %>
+</div>

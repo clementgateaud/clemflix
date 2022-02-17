@@ -1,0 +1,24 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.gannett-cdn.com/-mm-/83e081eae80cd2848af52df6da1060d621468f19/c=0-111-2120-1303/local/-/media/2021/02/04/USATODAY/usatsports/red-movie-theater-seats.jpg?width=1600&height=800&fit=crop&format=pjpg&auto=webp);">
+  <div class="container text-center">
+    <h1>Save any kind of movies</h1>
+    <p>Classic</p>
+  </div>
+</div>
+
+<div class="container py-4">
+  <div class="d-flex justify-content-between mb-4">
+    <h2>My lists</h2>
+    <%= link_to("Create a movie list", new_list_path, class: "btn btn-flat") %>
+  </div>
+  <div class="row">
+    <% @lists.each do |list| %>
+      <div class="col-md-4 mb-4">
+        <%= link_to list_path(list) do %>
+          <div class="card-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.lambesc.fr/fileadmin/user_upload/cinema.jpg)">
+            <p><%= list.name %></p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

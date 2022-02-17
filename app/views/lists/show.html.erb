@@ -1,0 +1,41 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://www.journaldugeek.com/content/uploads/2020/04/cinema.jpg');">
+  <div class="container text-center">
+    <h1><%= @list.name %></h1>
+  </div>
+  <a class="movies_nb btn btn-flat" href="#main"><%= @list.movies.length %> movies</a>
+</div>
+
+<div class="container" id="main">
+  <div class="d-flex justify-content-end my-4">
+    <%= link_to("Add a bookmark", new_list_bookmark_path(@list), class: "btn btn-flat") %>
+  </div>
+  <div class="row">
+    <% @list.movies.each do |movie| %>
+      <div class="col-md-6 mb-4">
+        <% bookmark =  movie.bookmarks.select{|bm| bm.list = @list}.first %>
+        <div class="card-movie">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <div class="card-movie-details">
+            <div class="card-movie-infos">
+              <h2><%= movie.title %><span id="rating"> · <%= movie.rating %> ⭐️</span></h2>
+              <p><%= movie.overview %></p>
+            </div>
+            <div class="card-movie-bookmark mt-2">
+              <div class="quotation d-flex">
+                <i class="fas fa-quote-left"></i>
+                <p ><%= bookmark.comment %></p>
+              </div>
+              <p>
+                <%= link_to("Delete",
+                          bookmark_path(bookmark),
+                          method: :delete,
+                          data: { confirm: "Are you sure?"},
+                          class: "text-danger") %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

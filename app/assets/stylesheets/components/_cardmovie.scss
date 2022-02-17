@@ -1,0 +1,44 @@
+.card-movie {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-movie > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-movie h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.card-movie h2 #rating {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card-movie p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0px;
+}
+
+
+.card-movie .card-movie-details {
+  padding: 16px;
+}
+
+.card-movie .quotation p {
+  font-weight:bold;
+  margin-left:5px;
+}
+
+.card-movie .card-movie-bookmark {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}

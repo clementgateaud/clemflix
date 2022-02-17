@@ -1,0 +1,8 @@
+<div class="container py-4">
+  <h1>Add a new bookmark</h1>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.input :comment %>
+    <%= f.association :movie %>
+    <%= f.button :submit, class: "btn btn-flat" %>
+  <% end %>
+</div>
