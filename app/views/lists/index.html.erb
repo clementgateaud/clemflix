@@ -1,7 +1,6 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.gannett-cdn.com/-mm-/83e081eae80cd2848af52df6da1060d621468f19/c=0-111-2120-1303/local/-/media/2021/02/04/USATODAY/usatsports/red-movie-theater-seats.jpg?width=1600&height=800&fit=crop&format=pjpg&auto=webp);">
   <div class="container text-center">
-    <h1>Save any kind of movies</h1>
-    <p>Classic</p>
+    <h1>Save and group your favorite movies</h1>
   </div>
 </div>
 
@@ -14,7 +13,7 @@
     <% @lists.each do |list| %>
       <div class="col-md-4 mb-4">
         <%= link_to list_path(list) do %>
-          <div class="card-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key, crop: :fill %>')">
+          <div class="card-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key %>')">
             <p><%= list.name %></p>
           </div>
         <% end %>

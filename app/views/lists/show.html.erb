@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://www.journaldugeek.com/content/uploads/2020/04/cinema.jpg');">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('<%= cl_image_path @list.photo.key %>')">
   <div class="container text-center">
     <h1><%= @list.name %></h1>
   </div>
@@ -18,9 +18,9 @@
           <div class="card-movie-details">
             <div class="card-movie-infos">
               <h2><%= movie.title %><span id="rating"> · <%= movie.rating %> ⭐️</span></h2>
-              <p><%= movie.overview %></p>
+              <p class="my-2"><%= movie.overview %></p>
             </div>
-            <div class="card-movie-bookmark mt-2">
+            <div class="card-movie-bookmark">
               <div class="quotation d-flex">
                 <i class="fas fa-quote-left"></i>
                 <p ><%= bookmark.comment %></p>

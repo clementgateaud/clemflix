@@ -12,6 +12,10 @@
 @import "components/index";
 @import "pages/index";
 
+body {
+  background-color: black;
+}
+
 .container {
   width:800px;
 }
@@ -20,10 +24,6 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, p, a {
   font-family: 'Open Sans', sans-serif;
-}
-
-p {
-  font-family: 'Roboto', sans-serif;
 }
