@@ -70,6 +70,10 @@ GEM
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     diff-lcs (1.5.0)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.10.0)
     execjs (2.7.0)
     faker (2.19.0)
@@ -221,6 +225,7 @@ DEPENDENCIES
   autoprefixer-rails (= 10.2.5)
   bootsnap (>= 1.4.4)
   byebug
+  dotenv-rails
   faker
   font-awesome-sass (~> 5.15)
   jbuilder (~> 2.7)
