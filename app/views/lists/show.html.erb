@@ -14,7 +14,7 @@
       <div class="col-md-6 mb-4">
         <% bookmark =  movie.bookmarks.select{|bm| bm.list = @list}.first %>
         <div class="card-movie">
-          <img src= <%= movie.poster_url %>/>
+          <img src= <%= movie.poster_url %>>
           <div class="card-movie-details">
             <div class="card-movie-infos">
               <h2><%= movie.title %><span id="rating"> · <%= movie.rating %> ⭐️</span></h2>
