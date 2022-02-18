@@ -5,34 +5,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-      <div class="container-fluid">
-        <%= link_to root_path, class:"navbar-brand" do %>
-          <img src="https://www.amara.com/static/uploads/images-2/products/huge/142681/popcorn-vinyl-placemat-863399.jpg" />
-        <% end %>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto">
-              <li class="nav-item active">
-                <%= link_to("My lists", root_path, class: "nav-link") %>
-              </li>
-              <li class="nav-item">
-                <%= link_to("New list", new_list_path, class: "nav-link") %>
-              </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
+    <%= render 'layouts/navbar' %>
     <%= yield %>
   </body>
 </html>

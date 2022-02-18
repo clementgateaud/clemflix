@@ -14,7 +14,7 @@
     <% @lists.each do |list| %>
       <div class="col-md-4 mb-4">
         <%= link_to list_path(list) do %>
-          <div class="card-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.lambesc.fr/fileadmin/user_upload/cinema.jpg)">
+          <div class="card-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key, crop: :fill %>')">
             <p><%= list.name %></p>
           </div>
         <% end %>
