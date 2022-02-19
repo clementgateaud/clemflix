@@ -1,8 +1,69 @@
 .navbar {
   justify-content: space-between;
-  background: black;
+  background-color: white;
+}
+
+.navbar.dark {
+  justify-content: space-between;
+  background-color: black;
 }
 
 .navbar-collapse {
   flex-grow: 0;
+}
+
+.navbar-brand img{
+  width:100px;
+}
+
+.nav-link {
+  color: black;
+  transition:none;
+  font-family: 'Open Sans', sans-serif;
+  &:hover {
+    color: black;
+  }
+}
+
+.nav-link.dark {
+  color: white;
+  &:hover {
+    color: white;
+  }
+}
+
+.navbar-toggler {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  &:focus {
+    box-shadow:0 0 0;
+  }
+}
+
+.navbar-toggler-icon {
+  width:100%;
+  height:100%;
+  color: black;
+}
+
+.navbar-toggler-icon.dark {
+  color: white;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin:0px;
+}
+
+.nav-text {
+  padding: 8px;
+  color:black;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.nav-text.dark {
+  color:white;
 }

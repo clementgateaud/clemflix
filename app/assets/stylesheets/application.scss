@@ -12,7 +12,12 @@
 @import "components/index";
 @import "pages/index";
 
+
 body {
+  background-color: white;
+}
+
+body.dark {
   background-color: black;
 }
 

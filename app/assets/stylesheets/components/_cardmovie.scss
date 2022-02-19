@@ -17,7 +17,7 @@
   margin: 0px;
 }
 
-.card-movie h2 #rating {
+.card-movie #rating {
   font-size: 14px;
   font-weight: 500;
 }
@@ -42,4 +42,9 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+#overview {
+  text-align: justify;
+  text-justify: inter-word;
 }

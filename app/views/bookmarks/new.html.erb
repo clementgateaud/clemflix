@@ -1,8 +1,8 @@
-<div class="container py-4 text-light">
-  <h1>Add a movie to <%= @list.name%></h1>
+<div class="container py-4 form">
+  <h1 data-dark-target="dark">Add a movie to <%= @list.name%></h1>
   <%= simple_form_for [@list, @bookmark] do |f| %>
-    <%= f.input :comment %>
-    <%= f.association :movie %>
+    <%= f.input :comment, label_html: { data: {dark_target:"dark"}} %>
+    <%= f.association :movie, label_html: { data: {dark_target:"dark"}} %>
     <%= f.button :submit, class: "btn btn-flat" %>
   <% end %>
 </div>

@@ -17,8 +17,11 @@
           <img src= <%= movie.poster_url %>>
           <div class="card-movie-details">
             <div class="card-movie-infos">
-              <h2><%= movie.title %><span id="rating"> · <%= movie.rating %> ⭐️</span></h2>
-              <p class="my-2"><%= movie.overview %></p>
+              <div class="d-flex justify-content-between">
+                <h2><%= movie.title %></h2>
+                <span id="rating"><%= movie.rating %> ⭐️</span>
+              </div>
+              <p class="my-2" id="overview"><%= movie.overview %></p>
             </div>
             <div class="card-movie-bookmark">
               <div class="quotation d-flex">
