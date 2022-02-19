@@ -15,7 +15,7 @@ movies = JSON.parse(URI.open("https://api.themoviedb.org/3/movie/popular?api_key
 movies["results"].each_with_index do |movie|
   title = movie["original_title"]
   overview = movie["overview"]
-  poster_url = "https://image.tmdb.org/t/p/original#{movie["poster_path"]}"
+  poster_url = "https://image.tmdb.org/t/p/original#{movie["backdrop_path"]}"
   rating = movie["vote_average"]
   Movie.create(title: title, overview: overview, poster_url: poster_url, rating: rating)
 end

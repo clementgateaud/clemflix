@@ -5,11 +5,8 @@
   </div>
 </div>
 
-<div class="container py-4">
-  <div class="d-flex justify-content-between mb-4">
-    <h2>My lists</h2>
-    <%= link_to("Create a movie list", new_list_path, class: "btn btn-flat") %>
-  </div>
+<div class="container py-4 home">
+  <h2 class="mb-4" data-dark-target="dark">My lists</h2>
   <div class="row">
     <% @lists.each do |list| %>
       <div class="col-md-4 mb-4">
@@ -20,5 +17,12 @@
         <% end %>
       </div>
     <% end %>
+    <div class="col-md-4 mb-4">
+        <%= link_to new_list_path do %>
+          <div class="card-list addlist">
+            <i class="fas fa-plus pluslist" data-dark-target="dark"></i>
+          </div>
+        <% end %>
+      </div>
   </div>
 </div>

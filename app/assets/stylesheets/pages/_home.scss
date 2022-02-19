@@ -1,1 +1,13 @@
 // Specific CSS for your home-page
+.home h2 {
+  color:black;
+  font-size: 32px;
+}
+
+.home h2.dark {
+  color:white;
+}
+
+.addlist {
+  background-color: rgba(240,240,240,0.1);
+}

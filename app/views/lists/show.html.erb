@@ -1,14 +1,11 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('<%= cl_image_path @list.photo.key %>')">
-  <div class="container text-center">
-    <h1><%= @list.name %></h1>
-  </div>
-  <a class="movies_nb btn btn-flat" href="#main"><%= @list.movies.length %> movies</a>
+<div class="container d-flex justify-content-between my-3 list">
+  <h1 data-dark-target="dark"><%= @list.name %> - <span id="nbmovies"><%= @list.movies.length %> movies</span></h1>
+  <%= link_to new_list_bookmark_path(@list) do %>
+    <i class="fas fa-plus-square" data-dark-target="dark"></i>
+  <% end %>
 </div>
 
-<div class="container" id="main">
-  <div class="d-flex justify-content-end my-4">
-    <%= link_to("Add a movie to the list", new_list_bookmark_path(@list), class: "btn btn-flat") %>
-  </div>
+<div class="container">
   <div class="row">
     <% @list.movies.each do |movie| %>
       <div class="col-md-6 mb-4">
@@ -21,7 +18,7 @@
                 <h2><%= movie.title %></h2>
                 <span id="rating"><%= movie.rating %> ⭐️</span>
               </div>
-              <p class="my-2" id="overview"><%= movie.overview %></p>
+              <p class="my-2" id="overview"><%= truncate(movie.overview, :length => 200) %></p>
             </div>
             <div class="card-movie-bookmark">
               <div class="quotation d-flex">
@@ -40,5 +37,10 @@
         </div>
       </div>
     <% end %>
+    <div class="col-md-6 mb-4">
+      <div class="card-movie addmovie">
+        <i class="fas fa-plus plusmovie" data-dark-target="dark"></i>
+      </div>
+    </div>
   </div>
 </div>
