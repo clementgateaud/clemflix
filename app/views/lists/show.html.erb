@@ -7,7 +7,7 @@
 
 <div class="container">
   <div class="row">
-    <% @list.movies.sort_by{|m|m.title}.each do |movie| %>
+    <% @list.movies.sort_by{|m|m.updated_at}.reverse.each do |movie| %>
       <div class="col-md-6 mb-4">
         <% bookmark =  movie.bookmarks.select{|bm| bm.list = @list}.first %>
         <div class="card-movie">
