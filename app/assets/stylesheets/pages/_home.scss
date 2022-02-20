@@ -11,3 +11,24 @@
 .addlist {
   background-color: rgba(240,240,240,0.1);
 }
+
+.banner h1 {
+  color:black;
+}
+
+.banner h1.dark {
+  color:white;
+}
+
+.banner p {
+  color:black;
+}
+
+.banner p.dark {
+  color:white;
+}
+
+
+.typed-cursor {
+  display: none;
+}

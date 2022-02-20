@@ -7,7 +7,7 @@
 
 <div class="container">
   <div class="row">
-    <% @list.movies.each do |movie| %>
+    <% @list.movies.sort_by{|m|m.title}.each do |movie| %>
       <div class="col-md-6 mb-4">
         <% bookmark =  movie.bookmarks.select{|bm| bm.list = @list}.first %>
         <div class="card-movie">
@@ -38,9 +38,11 @@
       </div>
     <% end %>
     <div class="col-md-6 mb-4">
-      <div class="card-movie addmovie">
-        <i class="fas fa-plus plusmovie" data-dark-target="dark"></i>
-      </div>
+      <%= link_to new_list_bookmark_path(@list) do %>
+        <div class="card-movie addmovie">
+          <i class="fas fa-plus plusmovie" data-dark-target="dark"></i>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

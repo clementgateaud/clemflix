@@ -1,8 +1,19 @@
 <div class="container py-4 form">
+  <%= render 'layouts/modal' %>
+
   <h1 data-dark-target="dark">Add a movie to <%= @list.name%></h1>
+
   <%= simple_form_for [@list, @bookmark] do |f| %>
-    <%= f.input :comment, label_html: { data: {dark_target:"dark"}} %>
-    <%= f.association :movie, label_html: { data: {dark_target:"dark"}} %>
-    <%= f.button :submit, class: "btn btn-flat" %>
+    <%= f.association :movie, collection: Movie.order('title ASC'), label_html: { data: {dark_target:"dark"}} %>
+    <p class="modal-link" data-dark-target="dark">> Your movie is not in the list above ?
+      <a href="#" data-toggle="modal" data-target="#exampleModal">
+        Add it
+      </a>
+    </p>
+    <%= f.input :comment, label_html: { data: {dark_target:"dark"}}, placeholder:"i.e. why you add this movie..." %>
+    <%= f.submit 'Add movie to my list', class: "btn btn-flat" %>
   <% end %>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

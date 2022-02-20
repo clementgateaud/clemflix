@@ -1,0 +1,18 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add movie to the database</h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for [@list, @movie] do |f| %>
+          <%= simple_fields_for :other do |o| %>
+            <%= o.input :query, as: :string, label: 'Movie precise title', placeholder: 'Charlie and the Chocolate Factory' %>
+          <% end %>
+          <%= f.submit 'Add', class: "btn btn-flat" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
