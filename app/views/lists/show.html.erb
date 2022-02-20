@@ -1,8 +1,14 @@
 <div class="container d-flex justify-content-between my-3 list">
-  <h1 data-dark-target="dark"><%= @list.name %> - <span id="nbmovies"><%= @list.movies.length %> movies</span></h1>
-  <%= link_to new_list_bookmark_path(@list) do %>
-    <i class="fas fa-plus-square" data-dark-target="dark"></i>
-  <% end %>
+  <div class="d-flex align-items-end">
+    <h1 data-dark-target="dark"><%= @list.name %> - <span id="nbmovies"><%= @list.movies.length %> movies</span></h1>
+    <%= link_to("🗑",
+                              list_path(@list),
+                              method: :delete,
+                              data: { confirm: "Are you sure?"}) %>
+  </div>
+    <%= link_to new_list_bookmark_path(@list) do %>
+      <i class="fas fa-plus-square" data-dark-target="dark"></i>
+    <% end %>
 </div>
 
 <div class="container">
