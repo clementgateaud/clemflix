@@ -17,9 +17,6 @@ movies["results"].first(5).each_with_index do |movie|
   overview = movie["overview"]
   poster_url = "https://image.tmdb.org/t/p/original#{movie["backdrop_path"]}"
   rating = movie["vote_average"]
-  Movie.create(title: title, overview: overview, poster_url: poster_url, rating: rating)
-end
-
-10.times do
-  Bookmark.create(list: list, movie: Movie.all.sample, comment:"I loved that movie")
+  mv = Movie.create(title: title, overview: overview, poster_url: poster_url, rating: rating)
+  Bookmark.create(list: list, movie: mv, comment:"I loved that movie")
 end
