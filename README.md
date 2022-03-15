@@ -1,4 +1,4 @@
-Clemflix is a simple app to create movies playlists with OMDB api.
+Clemflix is a simple app to create movies playlists with OMDB api. Coded in 2-3 days.
 
 Stack: Ruby on Rails, StimulusJS<br>
 Main features: CRUD, API fetch, dark mode<br>
